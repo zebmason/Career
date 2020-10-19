@@ -28,6 +28,7 @@ for line in lines:
     assembled += line + "\n"
     
 assembled = markdown.markdown(assembled)
+assembled = assembled.replace("<h2>", "\n<h2>")
 
 template = open("template.html", "r")
 temp = template.read()
